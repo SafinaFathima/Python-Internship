@@ -1,0 +1,10 @@
+def ans(str):
+    anagrams={}
+    for i in str:
+        key=''.join(sorted(i))
+        if(key in anagrams):
+            anagrams[key].append(i)
+        else:
+            anagrams[key]=[i]
+    return list(anagrams.keys()),list(anagrams.values())
+print(ans(['eat','tea','ate,','meat','team']))
